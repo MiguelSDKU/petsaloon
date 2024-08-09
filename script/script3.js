@@ -1,5 +1,5 @@
-let pets = []; //pets array
-console.log("First Line");
+// script3.js
+let pets = [];
 
 function Pet(name, age, gender, breed) {
   this.name = name;
@@ -9,6 +9,7 @@ function Pet(name, age, gender, breed) {
 }
 
 function Register() {
+  event.preventDefault();
   let inputName = document.getElementById("txtName").value;
   let inputAge = document.getElementById("txtAge").value;
   let inputGender = document.getElementById("txtGender").value;
@@ -17,16 +18,14 @@ function Register() {
   let newPet = new Pet(inputName, inputAge, inputGender, inputBreed);
 
   pets.push(newPet);
-  console.log(pets);
+  displayRow();
 }
 
 function init() {
   let pet1 = new Pet("Scooby", 10, "Male", "Husky");
   let pet2 = new Pet("Scrappy", 9, "Male", "Mixed");
-
-  console.log(pet1, pet2);
+  pets.push(pet1, pet2);
+  displayRow();
 }
 
 window.onload = init;
-
-console.log("Last Line");
