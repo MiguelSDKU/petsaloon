@@ -17,16 +17,29 @@ function clickMe() {
 }
 
 function clickOption1() {
+  $("#op1Link").addClass("btn");
+  $("#op2Link").removeClass("btn");
   $("#options1").show();
   $("#options2").hide();
 }
 
 function clickOption2() {
+  $("#op2Link").addClass("btn");
+  $("#op1Link").removeClass("btn");
   $("#options2").show();
   $("#options1").hide();
 }
 
+function register() {
+  event.preventDefault();
+  let userName = $("#txtName").val();
+  $("#results").append(`  
+    <li>${userName} </li>
+  `);
+}
+
 function init() {
+  $("#btnRegister").on("click", register);
   $("#btn1").on("click", clickMe);
   $("#options1").hide();
   $("#options2").hide();
