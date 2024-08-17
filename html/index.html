@@ -3,53 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/main.css" />
-    <title>Fashion Pet</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Pet Salon</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../styles/books.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <h1>The Fashion Pet</h1>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="#">Register</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <p class="main-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-          nemo.
-        </p>
-        <p class="secondary-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, facilis
-          voluptatibus optio soluta sint expedita.
-        </p>
-        <p class="normal-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
-          tempora eum vitae esse natus beatae, laboriosam optio! Explicabo,
-          consequatur vero.
-        </p>
+    <div class="above">
+      <header>
+        <a href="#">Home</a>
+        <a href="#">Appointments</a>
+        <a href="./services.html">Services</a>
+      </header>
+      <article class="pets">
+        <h2>Our Pet Care Services</h2>
+        <div class="service">
+          <img
+            src="https://bpanimalhospital.com/wp-content/uploads/shutterstock_1547371985.jpg"
+            alt="Pet Grooming"
+            class="service-img"
+          />
+          <div class="service-info">
+            <h3>Pet Grooming</h3>
+            <p>
+              Our grooming services include bathing, hair trimming, nail
+              clipping, and more to keep your pet looking and feeling great.
+            </p>
+          </div>
+        </div>
 
-        <p class="normal-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
-          perspiciatis?
-        </p>
-        <a href="#" class="btn">Book apointment</a>
-        <div>
-          <img src="/imgs/puppy.png" alt="puppy" />
+        <div class="service">
+          <img
+            src="https://www.petsupermarket.com/dw/image/v2/BGTK_PRD/on/demandware.static/-/Library-Sites-PetSupermarketLibrary/default/dwe1e6f89b/images/services/1-Up/Services_Dog_Being_Washed_1.jpg"
+            alt="Pet Bathing"
+            class="service-img"
+          />
+          <div class="service-info">
+            <h3>Pet Bathing</h3>
+            <p>
+              We use gentle, pet-safe shampoos and conditioners to ensure a
+              clean and fresh coat for your furry friend.
+            </p>
+          </div>
+        </div>
+
+        <div class="service">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJx-_WlwGaEs7uuI4RZvgXcbl1gCapBskwnw&s"
+            alt="Nail Clipping"
+            class="service-img"
+          />
+          <div class="service-info">
+            <h3>Nail Clipping</h3>
+            <p>
+              Regular nail clipping helps prevent discomfort and injury. Our
+              experts will make sure your pet's nails are perfectly trimmed.
+            </p>
+          </div>
+        </div>
+
+        <div class="service">
+          <img
+            src="https://i.insider.com/5ea869c9a34b3c2e173cc349?width=600&format=jpeg&auto=webp"
+            alt="Ear Cleaning"
+            class="service-img"
+          />
+          <div class="service-info">
+            <h3>Ear Cleaning</h3>
+            <p>
+              Proper ear care is crucial for your pet's health. We offer
+              thorough ear cleaning to help prevent infections.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <main>
+      <div id="htmlbooks" class="flexa">
+        <div class="registration">
+          <form action="#">
+            <p>RegisterForm</p>
+            <input
+              placeholder="Pet Name"
+              type="Text"
+              id="txtName"
+              class="red"
+            />
+            <input placeholder="Age" type="Text" id="txtAge" class="red" />
+            <input
+              placeholder="Gender"
+              type="Text"
+              id="txtGender"
+              class="red"
+            />
+            <input placeholder="Breed" type="Text" id="txtBreed" class="red" />
+            <input placeholder="Color" type="Text" id="txtColor" class="red" />
+
+            <!-- Cinta de selección de servicios -->
+            <select id="txtService" class="form-select">
+              <option value="" disabled selected>Select Service</option>
+            </select>
+
+            <button onclick="Register()">Press</button>
+          </form>
+        </div>
+
+        <div class="container">
+          <h2>Registered Pets</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Breed</th>
+                <th scope="col">Color</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="pets"></tbody>
+          </table>
         </div>
       </div>
     </main>
-    <footer></footer>
 
-    <script src="./script/script1.js"></script>
+    <script src="../script/script3.js"></script>
+
+    <script src="../script/display.js"></script>
+    <script src="../script/storeManager.js"></script>
+    <script src="../plugins/jQuery3.7.js"></script>
   </body>
 </html>
