@@ -53,3 +53,26 @@ h2 {
 #notification {
   margin-bottom: 20px;
 }
+
+header {
+  display: flex;
+  padding-bottom: 5dvh;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30dvh;
+  padding-top: 2dvh;
+  padding-right: 5dvh;
+  background-color: #001952;
+  margin-bottom: 2.5dvh;
+}
+
+header a {
+  margin-top: 2dvh;
+  color: white;
+  text-decoration: none;
+  font-size: 2.5dvh;
+}
+
+header a:hover {
+  color: green;
+}
