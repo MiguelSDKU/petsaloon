@@ -20,6 +20,15 @@ function register() {
 
   if (title === "" || price === "") {
     displayNotification("Please fill in all fields.", "danger");
+    if (title === "") {
+      $(".titleValidationMsg").css("color", "red").css("display", "block");
+    }
+
+    if (price === "") {
+      $(".descriptionValidationMsg")
+        .css("color", "red")
+        .css("display", "block");
+    }
     return;
   }
 
@@ -32,6 +41,7 @@ function register() {
   $("#servicePrice").val("");
 
   console.log(services);
+  save(newService);
 }
 
 function displayNotification(message, type) {
@@ -44,10 +54,22 @@ function displayNotification(message, type) {
   $("#notification").html(notification);
 }
 
+// function isvalidService(validTitle, validPrice) {
+//   let validTitle = true;
+//   let validPrice = true;
+
+//   if ((Service.title = "")) {
+//     validTitle = false;
+//     $(".titleValidationMsg").css("color", "red".show());
+//   }
+// }
+
 function init() {
   // Hook events
   $("#btnRegister").on("click", register);
   console.log(services);
+  $(".titleValidationMsg").hide();
+  $(".descriptionValidationMsg").hide();
 }
 
 $(document).ready(init);

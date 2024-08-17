@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link href="../styles/services.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container mt-4">
@@ -17,15 +18,18 @@
       <div class="mb-3">
         <label for="serviceTitle" class="form-label">Title:</label>
         <input type="text" class="form-control" id="serviceTitle" />
+        <small class="titleValidationMsg">This is a required field</small>
       </div>
       <div class="mb-3">
         <label for="servicePrice" class="form-label">Price:</label>
         <input type="number" class="form-control" id="servicePrice" />
+        <small class="descriptionValidationMsg">This is a required field</small>
       </div>
       <button class="btn btn-primary" id="btnRegister">Register</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../script/services.js"></script>
+    <script src="../script/storeManager.js"></script>
   </body>
 </html>

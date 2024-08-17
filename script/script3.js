@@ -74,6 +74,7 @@ function init() {
   let pet3 = new Pet("Princess", 2, "Female", "Pitbull", "Black");
   pets.push(pet1, pet2, pet3);
   displayRow();
+  getServices();
 }
 
 window.onload = init;
